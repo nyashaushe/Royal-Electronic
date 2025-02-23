@@ -31,10 +31,10 @@ const ProductCard = ({ name, price, image, description }: ProductCardProps) => {
         <h3 className="text-lg font-semibold text-royal-black mb-1">{name}</h3>
         <p className="text-royal-charcoal text-sm mb-2">{description}</p>
         <div className="flex justify-between items-center">
-          <span className="text-lg font-bold text-royal-black">
+          <span className="text-lg font-bold text-royal-blue">
             ${price.toFixed(2)}
           </span>
-          <button className="hover-effect p-2 rounded-full bg-royal-gray hover:bg-royal-black hover:text-white">
+          <button className="hover-effect p-2 rounded-full bg-royal-gray hover:bg-royal-blue hover:text-white">
             <ShoppingCart className="h-5 w-5" />
           </button>
         </div>
@@ -44,3 +44,4 @@ const ProductCard = ({ name, price, image, description }: ProductCardProps) => {
 };
 
 export default ProductCard;
+

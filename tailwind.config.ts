@@ -29,7 +29,12 @@ export default {
           black: "#1A1F2C",
           white: "#FFFFFF",
           gray: "#F1F0FB",
-          charcoal: "#221F26"
+          charcoal: "#221F26",
+          blue: {
+            light: "#4169E1",
+            DEFAULT: "#1E3A8A",
+            dark: "#0C1B44"
+          }
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -76,3 +81,4 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

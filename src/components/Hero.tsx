@@ -10,7 +10,7 @@ const Hero = () => {
           alt="Electronics repair"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-royal-black/80 to-royal-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-royal-blue/90 to-royal-blue-dark/80"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -21,7 +21,7 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto animate-fadeIn" style={{animationDelay: '0.2s'}}>
             Expert repair services for iPhone, Samsung, PC & Mac
           </p>
-          <button className="hover-effect inline-flex items-center px-8 py-3 rounded-full bg-white text-royal-black hover:bg-royal-gray animate-fadeIn" style={{animationDelay: '0.4s'}}>
+          <button className="hover-effect inline-flex items-center px-8 py-3 rounded-full bg-white text-royal-blue hover:bg-royal-gray animate-fadeIn" style={{animationDelay: '0.4s'}}>
             Book a Repair
             <Wrench className="ml-2 h-5 w-5" />
           </button>
@@ -32,3 +32,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
