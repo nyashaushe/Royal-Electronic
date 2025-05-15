@@ -1,8 +1,22 @@
 
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    toast({
+      title: "Message Sent",
+      description: "Thank you for your message. We'll get back to you soon!",
+    });
+    
+    // Reset form
+    const form = e.target as HTMLFormElement;
+    form.reset();
+  };
+
   return (
     <div className="min-h-screen bg-royal-white">
       <Navbar />
@@ -54,7 +68,7 @@ const Contact = () => {
 
               <div className="bg-white p-8 rounded-lg shadow-sm">
                 <h2 className="text-2xl font-bold text-royal-black mb-6">Send us a Message</h2>
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
                     <label className="block text-royal-black mb-2" htmlFor="name">Name</label>
                     <input
@@ -62,6 +76,7 @@ const Contact = () => {
                       id="name"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-royal-blue"
                       placeholder="Your name"
+                      required
                     />
                   </div>
                   <div>
@@ -71,6 +86,7 @@ const Contact = () => {
                       id="email"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-royal-blue"
                       placeholder="Your email"
+                      required
                     />
                   </div>
                   <div>
@@ -80,6 +96,7 @@ const Contact = () => {
                       rows={4}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-royal-blue"
                       placeholder="Your message"
+                      required
                     ></textarea>
                   </div>
                   <button
@@ -94,6 +111,7 @@ const Contact = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 };

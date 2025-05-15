@@ -1,5 +1,6 @@
 
 import { Wrench } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -21,10 +22,14 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto animate-fadeIn" style={{animationDelay: '0.2s'}}>
             Expert repair services for iPhone, Samsung, PC & Mac
           </p>
-          <button className="hover-effect inline-flex items-center px-8 py-3 rounded-full bg-white text-royal-blue hover:bg-royal-gray animate-fadeIn" style={{animationDelay: '0.4s'}}>
+          <Link 
+            to="/booking" 
+            className="hover-effect inline-flex items-center px-8 py-3 rounded-full bg-white text-royal-blue hover:bg-royal-gray animate-fadeIn" 
+            style={{animationDelay: '0.4s'}}
+          >
             Book a Repair
             <Wrench className="ml-2 h-5 w-5" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -32,4 +37,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

@@ -1,5 +1,6 @@
 
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const TESTIMONIALS = [
   {
@@ -98,6 +99,7 @@ const About = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 };
